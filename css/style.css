@@ -1,0 +1,548 @@
+@charset "UTF-8";
+html, body{
+  height: 100%;
+}
+
+h2{
+	text-align: center;
+	color: #FFF;
+	font-size: 26px;
+	font-weight: normal;
+	letter-spacing: 10px
+}
+
+img{
+	border: none;
+}
+
+a{
+	color: #999;
+	text-decoration: none;
+	transition: color 0.5s;
+}
+
+a:hover{
+  color: #fff8a9;
+}
+
+
+body{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: 'Inconsolata', 'migu1m', sans-serif;
+}
+
+#scroll{
+	position: fixed;
+	top: 100px;
+	right: 200px;
+	z-index: 100;
+}
+
+#scroll_attention{
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	color: red;
+	z-index: 30;
+	position: fixed;
+	font-size: 30px;
+}
+#scroll_attention:after {
+	position: absolute;
+	content: '';
+	top: -32px;
+}
+#home{
+	position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  zoom: 1;
+}
+#home:before,#home:after {
+  display: block;
+  height: 0;
+  visibility: hidden;
+  content: "\0020";
+}
+#home:after {
+  clear: both;
+}
+
+
+#global_navi{
+	height: 76px;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #3C3C3C;
+	overflow: hidden;
+	box-shadow: 0px 5px 5px 0 rgba(0,0,0,15);
+}
+#global_navi .navi_menu{
+	padding-top: 1.1em;
+}
+#global_navi .navi_menu .logo{
+	float: left;
+	margin-left: 40px;
+	letter-spacing: 5px;
+	font-size: 1.2em;
+}
+#global_navi .navi_menu .logo a:link, #global_navi .navi_menu .logo a:visited, #global_navi .navi_menu .logo a:hover, #global_navi .navi_menu .logo a:active {
+	color: #FFF;
+	text-decoration: none;
+}
+
+ #global_navi .navi_menu .logo a:link span, #global_navi .navi_menu .logo a:visited span, #global_navi .navi_menu .logo a:hover span, #global_navi .navi_menu .logo a:active span{
+ 	display: block;
+  float: left;
+}
+#global_navi .navi_menu ul {
+      margin-top: 0;
+      float: right;
+      zoom: 1;
+}
+#global_navi .navi_menu ul:before,
+#global_navi .navi_menu ul:after {
+  display: block;
+  height: 0;
+  visibility: hidden;
+  content: "\0020"; 
+}
+#global_navi .navi_menu ul:after {
+  clear: both;
+}
+#global_navi .navi_menu ul li {
+  float: left;
+  list-style: none;
+  margin-right: 40px;
+  letter-spacing: 5px;
+}
+#global_navi .navi_menu ul li a:link, 
+#global_navi .navi_menu ul li a:visited, 
+#global_navi .navi_menu ul li a:hover, 
+#global_navi .navi_menu ul li a:active {
+    color: #FFF;
+    text-decoration: none;
+}
+#global_navi .navi_menu #navi_marker {
+  display: block;
+  position: absolute;
+  width: 90px;
+  height: 5px;
+  background-color: #CCC;
+  right: 500px;
+  bottom: -5px;
+}
+
+#about {
+  background-color: #313437;
+  position: fixed;
+  z-index: 1;
+  padding-top:76px;
+	top: 0%;  
+	left: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+#about h2 {
+	margin-top: 3.2em;
+}
+
+#about .wrap {
+	width: 80%;
+	height: 50%;
+	margin: 5% auto 20%;
+  overflow: hidden;
+  zoom: 1; 
+}
+
+#about .wrap:before,
+#about .wrap:after {
+  display: block;
+  height: 0;
+  visibility: hidden;
+  content: "\0020";
+}
+#about .wrap:after {
+  clear: both;
+}
+#about .wrap .image {
+  width: 50%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+#about .wrap .image img {
+  height: 100%;
+  background-color: #fff;
+  border-radius: 100%;
+}
+#about .wrap .textbox {
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+#about .wrap .textbox .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  padding: 0 5%;
+  font-size: 16px;
+  color: #FFF;
+  letter-spacing: 3px;
+  opacity: 1;
+  overflow: hidden;
+}
+#about .wrap .textbox .text h3 {
+  font-weight: normal;
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 15px;
+  width: 50%;
+  border-bottom: 1px solid #949597;
+  display: inline-block;
+  text-align: left;
+}
+#about .wrap .textbox .text p {
+  line-height: 1.8;
+}
+#about .wrap .textbox .marker_area {
+  zoom: 1;
+  width: 120px;
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  margin-left: -60px;
+}
+#about .wrap .textbox .marker_area:before,
+#about .wrap .textbox .marker_area:after {
+  display: block;
+  height: 0;
+  visibility: hidden;
+  content: "\0020";
+}
+#about .wrap .textbox .marker_area:after {
+  clear: both;
+}
+#about .wrap .textbox .marker_area .marker_wrap {
+  position: relative;
+  width: 120px;
+  margin: 0 auto;
+  padding-top: 2px;
+}
+#about .wrap .textbox .marker_area .marker_wrap .marker {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: #EEEEEE;
+  border: 2px solid #313437;
+  margin: 2px;
+  float: left;
+  margin: 0 15px;
+}
+#about .wrap .textbox .marker_area .marker_wrap .marker.left {
+  left: 0;
+}
+#about .wrap .textbox .marker_area .marker_wrap .marker.right {
+  right: 0;
+}
+#about .wrap .textbox .marker_area .pointer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 14px;
+  background-color: #888888;
+}
+#about #skills {
+  background-color: #313437;
+  position: absolute;
+  left: 0;
+  bottom: -140px;
+  width: 100%;
+  height: 140px;
+}
+
+#skills{
+  background-color: #313437;
+  position: fixed;
+  z-index: 1;
+  padding-top:76px;
+  top: 0%;  
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-style: 
+}
+#skills h2 {
+  margin-top: 3.2em;
+}
+#skills .wrap {
+  width: 80%;
+  height: 50%;
+  margin: 5% auto 20%;
+  overflow: hidden;
+  zoom: 1; 
+}
+#skills .wrap:before, #skills .wrap:after {
+  display: block;
+  height: 0;
+  visibility: hidden;
+  content: "\0020"; 
+}
+#skills .wrap:after {
+  clear: both; 
+}
+#skills .wrap .beginner {
+  width: 50%;
+  height: 100%;
+  float: left; 
+}
+#skills .wrap .intermediate {
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+#skills .wrap p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 90%;
+  padding: 0 5%;
+  font-size: 16px;
+  color: #FFF;
+  letter-spacing: 3px;
+  opacity: 1;
+  overflow: hidden;
+  line-height: 1.8;
+}
+#skills .wrap h3 {
+  font-weight: normal;
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 15px;
+  width: 50%;
+  border-bottom: 1px solid #949597;
+  display: inline-block;
+  text-align: left;
+}
+
+#about #skills {
+  background-color: #313437;
+  position: absolute;
+  left: 0;
+  bottom: -140px;
+  width: 100%;
+  height: 140px;
+}
+
+#activity {
+  background-color: #313437;
+  position: fixed;
+  z-index: 1;
+  padding-top:76px;
+  top: 0%;  
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+#activity h2 {
+  margin-top: 3.2em;
+}
+
+#activity .wrap {
+  width: 90%;
+  height: 100%;
+  margin: 5% auto 20%;
+  overflow: hidden;
+  zoom: 1; 
+}
+
+#activity .wrap:before,
+#activity .wrap:after {
+  display: block;
+  height: 0;
+  visibility: hidden;
+  content: "\0020";
+}
+#activity .wrap:after {
+  clear: both;
+}
+#activity .wrap .image {
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+#activity .wrap .image img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  max-width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+#activity .wrap .textbox {
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+#activity .wrap .textbox .intern-text,
+#activity .wrap .textbox .hackathon-text,
+#activity .wrap .textbox .misawa-text,
+#activity .wrap .textbox .singapore-text {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  max-width: 40%
+  height: auto;
+  padding: 0 5%;
+  font-size: 16px;
+  color: #FFF;
+  letter-spacing: 3px;
+  opacity: 1;
+  overflow: hidden;
+}
+#activity .wrap .textbox .text h3 {
+  font-weight: normal;
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 15px;
+  width: 50%;
+  border-bottom: 1px solid #949597;
+  display: inline-block;
+  text-align: left;
+}
+#activity .wrap .textbox .text p {
+  line-height: 1.8;
+}
+#activity .wrap .textbox .marker_area {
+  zoom: 1;
+  width: 120px;
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  margin-left: -60px;
+}
+#activity .wrap .textbox .marker_area:before,
+#activity .wrap .textbox .marker_area:after {
+  display: block;
+  height: 0;
+  visibility: hidden;
+  content: "\0020";
+}
+#activity .wrap .textbox .marker_area:after {
+  clear: both;
+}
+#activity .wrap .textbox .marker_area .marker_wrap {
+  position: relative;
+  width: 120px;
+  margin: 0 auto;
+  padding-top: 2px;
+}
+#activity .wrap .textbox .marker_area .marker_wrap .marker {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: #EEEEEE;
+  border: 2px solid #313437;
+  margin: 2px;
+  float: left;
+  margin: 0 15px;
+}
+#activity .wrap .textbox .marker_area .marker_wrap .marker.left {
+  left: 0;
+}
+#activity .wrap .textbox .marker_area .marker_wrap .marker.right {
+  right: 0;
+}
+#activity .wrap .textbox .marker_area .pointer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 14px;
+  background-color: #888888;
+}
+
+#contact {
+  background-color: #313437;
+  position: fixed;
+  top: 100%;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  padding-top: 60px;
+  z-index: 10;
+}
+#contact #links {
+  width: 600px;
+  margin: 12% auto;
+  padding: 0;
+}
+#contact #links li {
+  list-style-type: none;
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 0 50px;
+}
+#contact #links li a {
+  -webkit-transition: 0.3s;
+}
+#contact #links li a:hover {
+  -webkit-transition: 0.3s;
+  opacity: 0.2;
+}
+#contact #links li img {
+  width: 100%;
+  height: 100%;
+}
+
+#copyright {
+  color: #FFFFFF;
+  text-align: center;
+  opacity: 0.8;
+}
+
+
+.cf{
+  zoom: 1;
+  z-index: 3;
+}
+.cf:before,
+.cf:after{
+  display: block;
+  height: 0;
+  visibility: hidden;
+  content: "\0020";
+}
+.cf:after {
+  clear: both; 
+}

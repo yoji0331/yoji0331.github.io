@@ -3,46 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <title>Yoji Sawada</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/lib/jquery-2.1.0.min.js"></script>
+  <script src="js/lib/skrollr.js"></script>
+  <script src="js/lib/script.js"></script>
   <link rel="canonical" href="/">
 </head>
 <body>
-  <div id="global_navi">
+  <!-- scroll attention -->
+  <div id="scroll_attention" data-0="opacity:1;top:50%;" data-300="opacity:0;">
+    Please Scroll<br>
+  </div>
+  <div id="global_navi" data-0="opacity:0;" data-350="opacity:0;" data-400="opacity:1;">
     <div class="navi_menu">
       <div class="logo">
-        <a href="#home">
+        <a href="#scroll_attention">
           <span>Yoji Sawada</span>
         </a>
       </div>
       <ul>
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#skills">SKILLS</a></li>
-        <li><a href="#presentation">PRESENTATION</a></li>
+        <li><a href="#activity">ACTIVITY</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
-      <span id="navi_marker"></span>
+      <span id="navi_marker"
+        data-320="bottom:-5px;"
+        data-420="bottom:0px;"
+        data-770="right:467px;"
+        data-820="right:348px;"
+        data-1000="right:348px;"
+        data-1200="right:209px;"
+        data-2300="right:209px;"
+        data-2500="right:58px;"
+      ></span>
     </div>
   </div>
 
-  <!--  home  -->
-  <div id="home">
-    <div>"Hello World"</div>
-  </div>
 
-  <!--  about  -->
-  <div id="about">
+  <!--  about -->  
+  <div id="about" data-370="top:100%;" data-420="top:0%;" data-770="top:0%;" data-820="top:-100%;">
     <h2>ABOUT</h2>
     <div class="wrap">
       <div class="image">
         <img src="img/profile.jpeg" alt="Yoji">
       </div>
       <div class="textbox">
-        <div class="text">
+        <div class="text" data-370="opacity:0;" data-420="opacity:1;" data-470="opacity:1;" data-520="opacity:0;">
           <h3>Yoji Sawada</h3>
           <p>Like: Apple, keyboard(US), Programming<br>
           Webもインフラ、どちらで生きていくか悩み中<br>
           趣味はビリヤード。</p><br>
         </div>
-        <div class="text">
+        <div class="text"  data-520="opacity:0;" data-570="opacity:1;" data-620="opacity:1;" data-670="opacity:0;">
           <h3>history</h3>
           <p>1995年(平成7年)生まれ。青森県弘前市出身。<br>
           大学でWeb開発の研究室に入る。<br>
@@ -50,13 +63,16 @@
           サーバ運用・保守を手がける会社に就職。<br>
           病気を経験し、退職。現在は克服し、就職活動中。</p><br>
         </div>
-        <div class="text">
+        <div class="text" data-670="opacity:0;" data-720="opacity:1;" data-770="opacity:1;" data-820="opacity:0;">
           <h3>mind</h3>
           <p>高校時代に出会ったNPO法人<a href="http://nla.or.jp/">NLA</a>のおかげでコミュ障を克服。今ではすっかり人と話すことが好きになりました。<br>
           イベントでの登壇を経験し、なんでも自分でやってみようとする精神が身につきました。「人とのつながり」を大事に生きていきたい23歳。</p>
         </div>
         <div class="marker_area">
-          <span class="pointer"></span>
+          <span class="pointer" 
+          data-420="left:13px;" data-570="left:53px;" 
+          data-570="left:53px;" data-720="left:61px;" 
+          data-720="left:61px;" data-770="left:98px;"></span>
           <div class="marker_wrap">
             <span class="marker"></span>
             <span class="marker"></span>
@@ -67,20 +83,20 @@
     </div>
   </div>
   
+
   <!--  skills  -->
-  <div id="skills">
+  <div id="skills" data-770="top:100%;" data-820="top:0%;" data-1000="top:0%;" data-1200="top:-100%;">
     <h2>SKILLS</h2>
-    <div class="checksheet">
-      <img src="img/checksheet.png" src="skills checksheet">
-    </div>
-    <div class="skilllevel">
-      <div class="skilltext">
-        <p>beginner</p>
+    <div class="wrap">
+      <div class="beginner">
+        <h3>Beginner</h3>
         <ul>
           <li>Linux</li>
           <li>Infrastructure</li>
         </ul>
-        <p>Intermediate</p>
+      </div>
+      <div class="intermediate">
+        <h3>Intermediate</h3>
         <ul>
           <li>Unix</li>
           <li>Ruby</li>
@@ -93,47 +109,45 @@
     </div>
   </div>
 
-  <!--  presentation  -->
-  <div id="presentation">
-    <h2>PRESENTATION</h2>
+
+  <!--  activity  -->
+  <div id="activity"  data-1000="top:100%;" data-1200="top:0%;" data-2300="top:0%;" data-2500="top:-100%;">
+    <h2>ACTIVITY</h2>
     <div class="wrap">
-      <div class="imagebox">
-        <div class="intern-image">
-          <div class="intern">
-            <img src="img/intern.jpg" alt="intern">
-          </div>
-          <div class="hackathon">
-            <img src="img/hackathon.jpg" alt="hackathon">
-          </div>
-          <div class="misawa">
-            <img src="img/JAWS_Misawa.jpg" alt="Misawa">
-          </div>
-          <div class="singapore">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/tIQfS5Ewu6o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
+      <div class="image">
+        <div class="intern" data-1000="opacity:0;" data-1200="opacity:1;" data-1300="opacity:1;" data-1400="opacity:0;">
+          <img src="img/intern.jpg" alt="intern">
+        </div>
+        <div class="hackathon" data-1400="opacity:0;" data-1500="opacity:1;" data-1600="opacity:1;" data-1700="opacity:0;">
+          <img src="img/hackathon.jpg" alt="hackathon">
+        </div>
+        <div class="misawa" data-1700="opacity:0;" data-1800="opacity:1;" data-1900="opacity:1;" data-2000="opacity:0;">
+          <img src="img/JAWS_Misawa.jpg" alt="Misawa">
+        </div>
+        <div class="singapore" data-2000="opacity:0;" data-2100="opacity:1;" data-2200="opacity:1;" data-2300="opacity:0;">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/tIQfS5Ewu6o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-      <div class="pre-textbox">
-        <div class="intern-text">
-          <p>大学2年時にYahooJAPANのインターンシップに参加。</p>
+      <div class="textbox">
+        <div class="intern-text" data-1000="opacity:0;" data-1200="opacity:1;" data-1600="opacity:1;" data-1700="opacity:0;">
+          <p>大学2年時にYahooJAPANのインターンシップに参加。<br>
+          同時開催のHack Dayで電子書籍賞を獲得。</p>
         </div>
-        <div class="hackathon-text">
-          <p>同時開催のHack Dayで電子書籍賞を獲得。</p>
-          </div>
+        <div class="misawa-text" data-1700="opacity:0;" data-1800="opacity:1;" data-1900="opacity:1;" data-2000="opacity:0;">
+        <p>2016年6月25日、JAWS-UG青森で登壇。<br></p>
+        <a href="https://www.slideshare.net/YojiSawada/jawsug-5-63434097">資料はこちら</a>
         </div>
-        <div class="misawa-text">
-        <p>2016年6月25日、JAWS-UG青森で登壇。</p>
-        </div>
-        <div class="singapore-text">
-        <p>2016年9月7日、シンガポールで開催された「AWSUG-SG / JAWS-UG Combined Meetup #1」で登壇。</p>
+        <div class="singapore-text" data-2000="opacity:0;" data-2100="opacity:1;" data-2200="opacity:1;" data-2300="opacity:0;">
+        <p>2016年9月7日、シンガポールで開催された「AWSUG-SG / JAWS-UG Combined Meetup #1」で登壇。<br></p><a href="https://www.slideshare.net/YojiSawada/lt-in-singapore">資料はこちら</a>
         </div>
       </div>
     </div>
-    
+  
+
   <!--  contact  -->
-  <div id="contact">
+  <div id="contact" data-2300="top:100%;" data-2500="top:0%;">
     <h2>CONTACT</h2>
-    <ul id="links">
+    <ul id="links" class="cf">
       <li>
         <a href="https://twitter.com/yooooo231" target="_blank">
         <img src="img/link_twitter.png" alt="teitter">
@@ -147,9 +161,13 @@
         <img src="img/link_github.png" alt="github">
       </li>
     </ul>
+   <div id="copyright" data-2400="opacity:0;" data-2500="opacity:1;">2017 &copy; yoji0331</div>
   </div>
 
 
-  <div id="back"><a href="#home">back</a></div>
+  <div id="back"><a href="#about">back</a></div>
+  <script type="text/javascript">
+    var s = skrollr.init();
+  </script>>
 </body>
 </html>
